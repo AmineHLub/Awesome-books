@@ -9,7 +9,7 @@ class BooksAndAuthor {
   }
 }
 
-const arrOfBooks = [];
+let arrOfBooks = [];
 
 // eslint-disable-next-line consistent-return
 function addBook() {
@@ -27,19 +27,24 @@ function addBook() {
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
     const h3 = document.createElement('h3');
-    const button = document.createElement('button');
+    const buttonContainer = document.createElement('div');
     div.classList.add('book');
     h2.classList.add('book-name');
     h3.classList.add('author');
-    button.classList.add('remove');
     document.querySelector('.books-list').append(div);
     h2.innerText = title.value;
     h3.innerText = author.value;
-    button.innerText = 'Remove';
     div.append(h2);
     div.append(h3);
-    div.append(button);
+    buttonContainer.innerHTML = `<button onclick="arrposition(${arrOfBooks.length})">Remove</button>`;
+    div.append(buttonContainer);
   }
 }
 
 add.addEventListener('click', addBook);
+
+// eslint-disable-next-line no-unused-vars
+function arrposition(number) {
+  arrOfBooks = arrOfBooks.splice(number, number+1);
+  console.log(arrOfBooks, arrOfBooks.length);
+}
