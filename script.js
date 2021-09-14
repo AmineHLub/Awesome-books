@@ -10,11 +10,12 @@ class BooksAndAuthor {
   }
 }
 
-const arrOfBooks = [{
-  book: 'temp name',
-  author: 'temp author',
-  idOfBook: 75,
-}];
+let arrOfBooks;
+
+arrOfBooks = JSON.parse(localStorage.getItem('storedBooks'));
+if (arrOfBooks === null) {
+  arrOfBooks = [];
+}
 
 // elements of array are posted on load
 if (arrOfBooks.length > 0) {
@@ -36,6 +37,7 @@ if (arrOfBooks.length > 0) {
     div.append(buttonContainer);
   }
 }
+
 // eslint-disable-next-line consistent-return
 function addBook() {
   if (!title.value || !author.value) {
@@ -65,6 +67,7 @@ function addBook() {
     div.append(h3);
     buttonContainer.innerHTML = `<button onclick="arrposition(${idGenerator})">Remove</button>`;
     div.append(buttonContainer);
+    localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
   }
 }
 
@@ -74,5 +77,5 @@ add.addEventListener('click', addBook);
 function arrposition(number) {
   document.getElementById(`${number}`).remove();
   arrOfBooks.splice(arrOfBooks.findIndex((item) => item.idOfBook === number), 1);
-  console.log(arrOfBooks, arrOfBooks.length);
+  localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
 }
