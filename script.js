@@ -25,7 +25,6 @@ class Management {
     const idGenerator = Math.floor(Math.random() * 100);
     arrOfBooks.push(new BooksAndAuthor(title.value, author.value, idGenerator));
     localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
-    console.log(arrOfBooks);
     // eslint-disable-next-line no-restricted-globals
     setTimeout('window.location.reload()', 0);
   }
@@ -61,11 +60,7 @@ function helperDelete(number) {
 
 function showbooklist() {
   const storageData = JSON.parse(localStorage.getItem('storedBooks'));
-  if (storageData.length === 0) {
-    const errorMsg = document.createElement('span');
-    errorMsg.innerText = 'There are no books saved!';
-    document.querySelector('.adding-form').append(errorMsg);
-  } else if (storageData) {
+  if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
       const div = document.createElement('div');
       const h2 = document.createElement('h2');
