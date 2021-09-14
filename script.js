@@ -15,9 +15,10 @@ class BooksAndAuthor {
 }
 
 class Management {
+  previousData = JSON.parse(localStorage.getItem('storedBooks'));
+
   add() {
     let arrOfBooks = [];
-    this.previousData = JSON.parse(localStorage.getItem('storedBooks'));
     if (this.previousData) {
       arrOfBooks = this.previousData;
     }
@@ -31,6 +32,9 @@ class Management {
 
   delete(number) {
     document.getElementById(`${number}`).remove();
+    const arrOfBooks = this.previousData;
+    arrOfBooks.splice(arrOfBooks.findIndex((item) => item.idOfBook === number), 1);
+    localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
   }
 }
 
@@ -57,7 +61,12 @@ function helperDelete(number) {
 
 function showbooklist() {
   const storageData = JSON.parse(localStorage.getItem('storedBooks'));
-  if (storageData) {
+  if (storageData.length === 0) {
+    const errorMsg = document.createElement('span');
+    errorMsg.innerText = 'There are no books saved!';
+    document.querySelector('.adding-form').append(errorMsg);
+  }
+  else if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
       const div = document.createElement('div');
       const h2 = document.createElement('h2');
