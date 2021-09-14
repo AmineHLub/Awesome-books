@@ -65,8 +65,7 @@ function showbooklist() {
     const errorMsg = document.createElement('span');
     errorMsg.innerText = 'There are no books saved!';
     document.querySelector('.adding-form').append(errorMsg);
-  }
-  else if (storageData) {
+  } else if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
       const div = document.createElement('div');
       const h2 = document.createElement('h2');
