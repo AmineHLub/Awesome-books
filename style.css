@@ -1,3 +1,12 @@
+@font-face {
+  font-family: magical;
+  src: url(fonts/Magical.ttf);
+}
+
+body {
+  font-family: 'magical', sans-serif;
+}
+
 .title {
   text-align: center;
 }
@@ -18,11 +27,11 @@
 .book > div {
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
 .book-name,
 .author {
-  font-size: 15px;
   font-weight: lighter;
 }
 
@@ -30,6 +39,7 @@
   display: flex;
   align-items: center;
   flex-flow: row wrap;
+  font-size: 20px;
 }
 
 .flexing > span {

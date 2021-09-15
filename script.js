@@ -34,6 +34,7 @@ class Management {
     const arrOfBooks = this.previousData;
     arrOfBooks.splice(arrOfBooks.findIndex((item) => item.idOfBook === number), 1);
     localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
+    setTimeout('window.location.reload()', 0);
   }
 }
 
@@ -64,7 +65,7 @@ function showbooklist() {
     for (let i = 0; i < storageData.length; i += 1) {
       const div = document.createElement('div');
       const authorAndBookContainer = document.createElement('div');
-      const h2 = document.createElement('h2');
+      const h2 = document.createElement('h3');
       const h3 = document.createElement('h3');
       const spanby = document.createElement('span');
       const buttonContainer = document.createElement('div');
