@@ -63,18 +63,24 @@ function showbooklist() {
   if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
       const div = document.createElement('div');
+      const authorAndBookContainer = document.createElement('div');
       const h2 = document.createElement('h2');
       const h3 = document.createElement('h3');
+      const spanby = document.createElement('span');
       const buttonContainer = document.createElement('div');
       div.classList.add('book');
+      authorAndBookContainer.classList.add('flexing');
       div.id = `${storageData[i].idOfBook}`;
       h2.classList.add('book-name');
       h3.classList.add('author');
       document.querySelector('.books-list').append(div);
       h2.innerText = storageData[i].book;
       h3.innerText = storageData[i].author;
-      div.append(h2);
-      div.append(h3);
+      authorAndBookContainer.append(h2);
+      authorAndBookContainer.append(spanby);
+      spanby.innerText = ('by');
+      authorAndBookContainer.append(h3);
+      div.append(authorAndBookContainer);
       buttonContainer.innerHTML = `<button onclick="helperDelete(${storageData[i].idOfBook})">Remove</button>`;
       div.append(buttonContainer);
     }
