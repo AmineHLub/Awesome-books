@@ -74,7 +74,7 @@ function showbooklist() {
       h2.classList.add('book-name');
       h3.classList.add('author');
       document.querySelector('.books-list').append(div);
-      h2.innerText = storageData[i].book;
+      h2.innerText = `"${storageData[i].book}"`;
       h3.innerText = storageData[i].author;
       authorAndBookContainer.append(h2);
       authorAndBookContainer.append(spanby);
@@ -83,6 +83,11 @@ function showbooklist() {
       div.append(authorAndBookContainer);
       buttonContainer.innerHTML = `<button onclick="helperDelete(${storageData[i].idOfBook})">Remove</button>`;
       div.append(buttonContainer);
+      if (i % 2 === 0) {
+        div.style.backgroundColor = '#a9a4a4ab';
+      } else {
+        div.style.backgroundColor = 'white';
+      }
     }
   } else {
     const errorMsg = document.createElement('span');

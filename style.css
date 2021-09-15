@@ -1,12 +1,15 @@
-.book-name,
-.author {
-  font-size: 15px;
-  font-weight: lighter;
+.title {
+  text-align: center;
+}
+
+.books-list {
+  border: solid #1b1b1be3 3px;
+  border-radius: 4px;
 }
 
 .book {
-  padding-bottom: 20px;
-  border-bottom: 1px solid gray;
+  padding: 0 1%;
+  border-bottom: 1px solid rgba(99, 99, 99, 0.63);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -17,25 +20,10 @@
   align-items: center;
 }
 
-.adding-form {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  margin: 20px auto;
-  height: 100px;
-}
-
-.adding-form > button {
-  align-self: flex-end;
-}
-
-.title {
-  text-align: center;
-}
-
-.books-list {
-  border: solid black 3px;
-  padding: 0 0.5%;
+.book-name,
+.author {
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 .flexing {
@@ -64,4 +52,58 @@
 
 .input_form {
   border: solid grey 2px;
+}
+
+.adding-form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  margin: 20px 5% 20px 0;
+  width: 60%;
+}
+
+.adding-form > button {
+  align-self: flex-end;
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  border-radius: 0;
+  box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
+}
+
+.book > div > button {
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  border-radius: 0;
+  box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
+  margin-right: 5%;
+}
+
+.adding-form > button:hover {
+  color: white;
+  background-color: #1b1b1be3;
+  box-shadow: 4px 4px 2.5px 3px rgba(143, 143, 143, 0.82);
+}
+
+.adding-form > input {
+  width: 100%;
+  border: 2px solid #1b1b1be3;
+  border-radius: 43% 40% 25% 31% / 47% 40% 31% 10%; /** Generated online through 9elements **/
+  margin-bottom: 0.5rem;
+  padding: 2% 2% 1% 7%;
+}
+
+.adding-form > input:focus {
+  outline: none;
+}
+
+.book > div > button:active {
+  border-style: none;
+}
+
+.book > div > button:hover {
+  color: white;
+  background-color: #1b1b1be3;
+  box-shadow: 4px 4px 2.5px 3px rgba(226, 226, 226, 0.82);
 }
