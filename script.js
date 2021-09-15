@@ -104,3 +104,35 @@ if (!JSON.parse(localStorage.getItem('storedBooks')) || JSON.parse(localStorage.
 
 showbooklist();
 add.addEventListener('click', addbook);
+
+// get time
+
+// single page app
+
+const list = document.querySelector('.list-link');
+const addNew = document.querySelector('.Add-link');
+const contact = document.querySelector('.contact-link');
+const bookList = document.querySelector('.book_list');
+const addBook = document.querySelector('.add-new-books');
+const contactSection = document.querySelector('.contact');
+
+list.addEventListener('click', () => {
+  bookList.classList.add('show');
+  bookList.classList.remove('close');
+  addBook.classList.add('close');
+  contactSection.classList.add('close');
+});
+
+addNew.addEventListener('click', () => {
+  bookList.classList.add('close');
+  addBook.classList.add('show');
+  addBook.classList.remove('close');
+  contactSection.classList.add('close');
+});
+
+contact.addEventListener('click', () => {
+  bookList.classList.add('close');
+  addBook.classList.add('close');
+  contactSection.classList.add('show');
+  contactSection.classList.remove('close');
+});

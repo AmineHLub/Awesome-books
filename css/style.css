@@ -51,6 +51,10 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 60px;
 }
 
 .add_book_header {
@@ -142,4 +146,46 @@ body {
   background-repeat: no-repeat;
   background-position: 1% 45%;
   background-size: 2rem;
+}
+
+.book_list {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 60px;
+  left: -100%;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 60px;
+  left: -100%;
+}
+
+.contact_header {
+  font-size: 30px;
+}
+
+.contact_info {
+  font-size: 20px;
+}
+
+.show {
+  transform: translate(100%);
+  transition: 0.35s;
+}
+
+.close {
+  transform: translate(-100%);
+  transition: 0.35s;
+}
+
+.show_add_new {
+  transform: translate(-100%);
+  transition: 0.35s;
 }
