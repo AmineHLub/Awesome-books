@@ -9,6 +9,7 @@ body {
 
 .title {
   text-align: center;
+  font-size: 25px;
 }
 
 .books-list {
@@ -53,6 +54,7 @@ body {
 }
 
 .add_book_header {
+  font-size: 30px;
   margin-top: 2.5rem;
   border-top: solid rgba(97, 97, 97, 0.404) 2px;
   padding-top: 15px;
@@ -73,19 +75,19 @@ body {
 }
 
 .adding-form > button {
+  border-radius: 3px;
   align-self: flex-end;
   border-style: none;
   height: 30px;
   width: 80px;
-  border-radius: 0;
   box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
 }
 
 .book > div > button {
+  border-radius: 3px;
   border-style: none;
   height: 30px;
   width: 80px;
-  border-radius: 0;
   box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
   margin-right: 5%;
 }
@@ -97,11 +99,13 @@ body {
 }
 
 .adding-form > input {
+  font-size: 25px;
   width: 100%;
   border: 2px solid #1b1b1be3;
   border-radius: 43% 40% 25% 31% / 47% 40% 31% 10%; /** Generated online through 9elements **/
   margin-bottom: 0.5rem;
   padding: 2% 2% 1% 7%;
+  font-family: 'Magical', sans-serif;
 }
 
 .adding-form > input:focus {
