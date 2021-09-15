@@ -74,6 +74,12 @@ body {
   width: 60%;
 }
 
+.adding-form > span {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #2d2d2d;
+}
+
 .adding-form > button {
   border-radius: 3px;
   align-self: flex-end;
@@ -120,4 +126,20 @@ body {
   color: white;
   background-color: #1b1b1be3;
   box-shadow: 4px 4px 2.5px 3px rgba(226, 226, 226, 0.82);
+}
+
+.error-msg {
+  margin: 10px 0 0 0;
+  width: 60%;
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  background: #c91717ea;
+  border-radius: 8px;
+  padding: 7px;
+  padding-left: 40px;
+  color: rgb(224, 224, 224);
+  background-image: url(./src/alert.png);
+  background-repeat: no-repeat;
+  background-position: 1% 45%;
+  background-size: 2rem;
 }

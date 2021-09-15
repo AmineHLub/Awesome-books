@@ -45,6 +45,7 @@ function addbook() {
       const errorMsg = document.createElement('div');
       errorMsg.innerText = 'Please fill the fields before adding your book!';
       document.querySelector('.adding-form').append(errorMsg);
+      errorMsg.classList.add('error-msg');
     }
   } else {
     if (document.querySelector('.adding-form > div')) {
@@ -63,6 +64,7 @@ function showbooklist() {
   const storageData = JSON.parse(localStorage.getItem('storedBooks'));
   if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
+      document.querySelector('.books-list').style.display = 'block';
       const div = document.createElement('div');
       const authorAndBookContainer = document.createElement('div');
       const h2 = document.createElement('h3');
@@ -90,11 +92,14 @@ function showbooklist() {
         div.style.backgroundColor = 'white';
       }
     }
-  } else {
-    const errorMsg = document.createElement('span');
-    errorMsg.innerText = 'There are no books saved!';
-    document.querySelector('.adding-form').append(errorMsg);
   }
+}
+
+if (!JSON.parse(localStorage.getItem('storedBooks')) || JSON.parse(localStorage.getItem('storedBooks')).length === 0) {
+  document.querySelector('.books-list').style.display = 'none';
+  const errorMsg = document.createElement('span');
+  errorMsg.innerText = 'There are no books saved!';
+  document.querySelector('.adding-form').append(errorMsg);
 }
 
 showbooklist();
