@@ -1,23 +1,145 @@
-.book-name,
-.author {
-  font-size: 15px;
-  font-weight: lighter;
+@font-face {
+  font-family: magical;
+  src: url(fonts/Magical.ttf);
+}
+
+body {
+  font-family: 'magical', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.books-list {
+  border: solid #1b1b1be3 3px;
+  border-radius: 4px;
 }
 
 .book {
-  padding-bottom: 20px;
-  border-bottom: 1px solid gray;
+  padding: 0 1%;
+  border-bottom: 1px solid rgba(99, 99, 99, 0.63);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.book > div {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.book-name,
+.author {
+  font-weight: lighter;
+}
+
+.flexing {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  font-size: 20px;
+}
+
+.flexing > span {
+  margin: 0 15px 0 15px;
+}
+
+.add-new-books {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.add_book_header {
+  font-size: 30px;
+  margin-top: 2.5rem;
+  border-top: solid rgba(97, 97, 97, 0.404) 2px;
+  padding-top: 15px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.input_form {
+  border: solid grey 2px;
 }
 
 .adding-form {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
-  margin: 20px 0;
-  height: 100px;
-  width: 50%;
+  justify-content: space-evenly;
+  margin: 20px 5% 20px 0;
+  width: 60%;
+}
+
+.adding-form > span {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #2d2d2d;
 }
 
 .adding-form > button {
-  align-self: flex-start;
+  border-radius: 3px;
+  align-self: flex-end;
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
+}
+
+.book > div > button {
+  border-radius: 3px;
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  box-shadow: 4px 4px 2.5px 3px #1b1b1be3;
+  margin-right: 5%;
+}
+
+.adding-form > button:hover {
+  color: white;
+  background-color: #1b1b1be3;
+  box-shadow: 4px 4px 2.5px 3px rgba(143, 143, 143, 0.82);
+}
+
+.adding-form > input {
+  font-size: 25px;
+  width: 100%;
+  border: 2px solid #1b1b1be3;
+  border-radius: 43% 40% 25% 31% / 47% 40% 31% 10%; /** Generated online through 9elements **/
+  margin-bottom: 0.5rem;
+  padding: 2% 2% 1% 7%;
+  font-family: 'Magical', sans-serif;
+}
+
+.adding-form > input:focus {
+  outline: none;
+}
+
+.book > div > button:active {
+  border-style: none;
+}
+
+.book > div > button:hover {
+  color: white;
+  background-color: #1b1b1be3;
+  box-shadow: 4px 4px 2.5px 3px rgba(226, 226, 226, 0.82);
+}
+
+.error-msg {
+  margin: 10px 0 0 0;
+  width: 60%;
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  background: #c91717ea;
+  border-radius: 8px;
+  padding: 7px;
+  padding-left: 40px;
+  color: rgb(224, 224, 224);
+  background-image: url(./src/alert.png);
+  background-repeat: no-repeat;
+  background-position: 1% 45%;
+  background-size: 2rem;
 }

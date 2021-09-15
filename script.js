@@ -34,6 +34,7 @@ class Management {
     const arrOfBooks = this.previousData;
     arrOfBooks.splice(arrOfBooks.findIndex((item) => item.idOfBook === number), 1);
     localStorage.setItem('storedBooks', JSON.stringify(arrOfBooks));
+    setTimeout('window.location.reload()', 0);
   }
 }
 
@@ -44,6 +45,7 @@ function addbook() {
       const errorMsg = document.createElement('div');
       errorMsg.innerText = 'Please fill the fields before adding your book!';
       document.querySelector('.adding-form').append(errorMsg);
+      errorMsg.classList.add('error-msg');
     }
   } else {
     if (document.querySelector('.adding-form > div')) {
@@ -62,27 +64,42 @@ function showbooklist() {
   const storageData = JSON.parse(localStorage.getItem('storedBooks'));
   if (storageData) {
     for (let i = 0; i < storageData.length; i += 1) {
+      document.querySelector('.books-list').style.display = 'block';
       const div = document.createElement('div');
-      const h2 = document.createElement('h2');
+      const authorAndBookContainer = document.createElement('div');
+      const h2 = document.createElement('h3');
       const h3 = document.createElement('h3');
+      const spanby = document.createElement('span');
       const buttonContainer = document.createElement('div');
       div.classList.add('book');
+      authorAndBookContainer.classList.add('flexing');
       div.id = `${storageData[i].idOfBook}`;
       h2.classList.add('book-name');
       h3.classList.add('author');
       document.querySelector('.books-list').append(div);
-      h2.innerText = storageData[i].book;
+      h2.innerText = `"${storageData[i].book}"`;
       h3.innerText = storageData[i].author;
-      div.append(h2);
-      div.append(h3);
+      authorAndBookContainer.append(h2);
+      authorAndBookContainer.append(spanby);
+      spanby.innerText = ('by');
+      authorAndBookContainer.append(h3);
+      div.append(authorAndBookContainer);
       buttonContainer.innerHTML = `<button onclick="helperDelete(${storageData[i].idOfBook})">Remove</button>`;
       div.append(buttonContainer);
+      if (i % 2 === 0) {
+        div.style.backgroundColor = '#a9a4a4ab';
+      } else {
+        div.style.backgroundColor = 'white';
+      }
     }
-  } else {
-    const errorMsg = document.createElement('span');
-    errorMsg.innerText = 'There are no books saved!';
-    document.querySelector('.adding-form').append(errorMsg);
   }
+}
+
+if (!JSON.parse(localStorage.getItem('storedBooks')) || JSON.parse(localStorage.getItem('storedBooks')).length === 0) {
+  document.querySelector('.books-list').style.display = 'none';
+  const errorMsg = document.createElement('span');
+  errorMsg.innerText = 'There are no books saved!';
+  document.querySelector('.adding-form').append(errorMsg);
 }
 
 showbooklist();
