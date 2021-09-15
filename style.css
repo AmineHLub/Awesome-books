@@ -8,6 +8,7 @@
   padding-bottom: 20px;
   border-bottom: 1px solid gray;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
@@ -19,10 +20,9 @@
 .adding-form {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 20px auto;
   height: 100px;
-  width: 50%;
 }
 
 .adding-form > button {
@@ -35,24 +35,31 @@
 
 .books-list {
   border: solid black 3px;
-  padding: 25px 0.5%;
+  padding: 0 0.5%;
 }
 
 .flexing {
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 .flexing > span {
   margin: 0 15px 0 15px;
 }
 
+.add-new-books {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 .add_book_header {
-  border-top: solid black 3px;
+  margin-top: 2.5rem;
+  border-top: solid rgba(97, 97, 97, 0.404) 2px;
   padding-top: 15px;
-  width: 10%;
-  margin: 20px auto 0 auto;
-  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .input_form {
