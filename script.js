@@ -125,7 +125,6 @@ list.addEventListener('click', () => {
 
 addNew.addEventListener('click', () => {
   bookList.classList.add('close');
-  addBook.classList.add('show');
   addBook.classList.remove('close');
   contactSection.classList.add('close');
 });
