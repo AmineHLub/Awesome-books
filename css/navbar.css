@@ -36,6 +36,8 @@ nav > ul {
 }
 
 .date-now {
+  position: relative;
+  z-index: 3;
   float: right;
   margin: 10px 2.3% 0;
   font-size: 1.5rem;
