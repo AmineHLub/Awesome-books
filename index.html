@@ -7,24 +7,29 @@
     <title>Awesome Books</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
 </head>
 <body>
     <header>
         <nav class="navbar d-flex">
             <h2>Awesome Books</h2>
             <ul class="nav-items d-flex">
-                <li class="list-link"><a href="#">List</a></li>
+                <li class="list-link"><a href="#list">List</a></li>
                 <li class="Add-link"><a href="#">Add new</a></li>
                 <li class="contact-link"><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="date-now"></div>
     </header>
     <main>
+        <div class="book_list">
         <section class="title">
             <h1>Awesome Books</h1>
         </section>
-        <section class="books-list">
+        <section id="list" class="books-list">
         </section>
+    </div>
         <section class="add-new-books">
             <h2 class="add_book_header">Add a new book</h2>
             <form class="adding-form" action=#>
@@ -33,7 +38,23 @@
                 <button type="submit" id="add_button">Add</button>
             </form>
         </section>
+        <section class="contact">
+            <h2 class="contact_header">Contact information</h2>
+            <span class="contact_info">Do you have any questions or just want to say "hello"?<br>You can reach out to us!</span>
+            <ul class="contact_info">
+                <li>Our e-mail: mail@mail.com</li>
+                <li>Our phone number: 002352635468</li>
+                <li>Our address: Streetname 66, 6965 City, Country</li>
+            </ul>
+        </section>
+        <footer>
+            <section class="footer-container d-flex">
+                <h3>Awesome Books</h3>
+                <span class="rights">All rights are reserved</span>
+            </section>
+        </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

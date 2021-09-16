@@ -1,0 +1,16 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer-container {
+  margin: 0 2% 2px 2%;
+  padding: 0 1% 0  1%;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #1b1b1be3;
+  border-radius: 4px;
+}

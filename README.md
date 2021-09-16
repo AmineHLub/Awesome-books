@@ -4,7 +4,9 @@
 
 > Booklist App
 
-![screenshot](./app_screenshot.png)
+![screenshot](./add.png)
+![screenshot](./list.png)
+![screenshot](./contact.png)
 
 This is a Microverse project. it's about an app that allows you to create/remove books to a database of books(stored in : local storage)
 
