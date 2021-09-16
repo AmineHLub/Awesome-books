@@ -118,7 +118,6 @@ const addBook = document.querySelector('.add-new-books');
 const contactSection = document.querySelector('.contact');
 
 list.addEventListener('click', () => {
-  bookList.classList.add('show');
   bookList.classList.remove('close');
   addBook.classList.add('close');
   contactSection.classList.add('close');
@@ -127,6 +126,7 @@ list.addEventListener('click', () => {
 addNew.addEventListener('click', () => {
   bookList.classList.add('close');
   addBook.classList.remove('close');
+  addBook.classList.add('show');
   contactSection.classList.add('close');
 });
 
