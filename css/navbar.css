@@ -34,3 +34,9 @@ nav > ul {
   border-right: 2px solid #205cff;
   padding-right: 9%;
 }
+
+.date-now {
+  float: right;
+  margin: 10px 2.3% 0;
+  font-size: 1.5rem;
+}

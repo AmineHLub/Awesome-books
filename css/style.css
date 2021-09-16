@@ -54,7 +54,8 @@ body {
   position: fixed;
   z-index: 2;
   width: 100%;
-  top: 60px;
+  top: 100px;
+  left: -100%;
 }
 
 .add_book_header {
@@ -152,8 +153,8 @@ body {
   position: fixed;
   z-index: 2;
   width: 100%;
-  top: 60px;
-  left: -100%;
+  top: 120px;
+  left: 100%;
 }
 
 .contact {
@@ -163,7 +164,7 @@ body {
   position: fixed;
   z-index: 2;
   width: 100%;
-  top: 60px;
+  top: 120px;
   left: -100%;
 }
 

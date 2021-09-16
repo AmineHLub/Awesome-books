@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-implied-eval */
 /* eslint-disable no-useless-constructor */
@@ -135,3 +136,7 @@ contact.addEventListener('click', () => {
   contactSection.classList.add('show');
   contactSection.classList.remove('close');
 });
+
+const { DateTime } = luxon;
+const now = DateTime.now();
+document.querySelector('.date-now').innerText = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
