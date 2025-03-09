@@ -37,10 +37,9 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Badr Ben Slama**
+👤 **Goldinium**
 
 - GitHub: [@Goldinium](https://github.com/Goldinium)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/badrbenslama)
 
 👤 **Mohamed Amine Hajltiaef**
 - GitHub: [@AmineHLub](https://github.com/AmineHLub)
